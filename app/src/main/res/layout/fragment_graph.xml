@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable name="graphFragmentViewModel" type="com.kchernenko.spacex.viewmodel.GraphFragmentViewModel"/>
+
+    </data>
+
+    <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <com.kchernenko.spacex.ui.view.GraphView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:graphData="@{graphFragmentViewModel.dataList}"/>
+
+    </HorizontalScrollView>
+</layout>

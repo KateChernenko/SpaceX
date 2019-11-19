@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SpaceX</string>
+    <string name="tab_text_1">Launches</string>
+    <string name="tab_text_2">Years</string>
+    <string name="site_name">Site: %s</string>
+    <string name="rocket_name">Rocket: %s</string>
+    <string name="video">Video: %s</string>
+    <string name="title_activity_details">DetailsActivity</string>
+</resources>

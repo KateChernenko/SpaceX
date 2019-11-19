@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+        <variable name="viewModel"
+                  type="com.kchernenko.spacex.viewmodel.LaunchesListFragmentViewModel"/>
+
+        <variable name="dataLaunchModel"
+                  type="com.kchernenko.spacex.model.LaunchModel"/>
+
+    </data>
+    <LinearLayout
+            android:onClick="@{()-> viewModel.onItemClick(dataLaunchModel.id)}"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:text="@{Integer.toString(dataLaunchModel.id)}"
+                android:paddingStart="16dp"
+                android:paddingEnd="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:text="@{dataLaunchModel.name}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+</layout>
