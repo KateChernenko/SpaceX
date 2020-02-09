@@ -5,6 +5,7 @@
         <!--<variable name="pagerTabsFragmentViewModel" type="com.kchernenko.spacex.viewmodel.PagerTabsFragmentViewModel"/>-->
 
         <variable name="viewPagerBaseAdapter" type="com.kchernenko.spacex.ui.adapter.ViewPagerBaseAdapter"/>
+        <variable name="adapter" type="com.kchernenko.spacex.ui.adapter.IndicatorAdapter"/>
 
     </data>
 
@@ -12,6 +13,11 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:setIndicatorAdapter="@{adapter}"/>
 
         <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tabs"
